@@ -740,7 +740,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="bee-row bee-row-4">
+		<div class="bee-row bee-row-4 bee-desktop_hide">
 			<div class="bee-background-video-container">
 				<div id="player" class="bee-iframe-video-container"></div>
 					
@@ -782,7 +782,6 @@
 							event.target.playVideo();
 						}
 					</script>
-				
 			</div>
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w12">
@@ -1144,11 +1143,45 @@
 		</div>
 		<div class="bee-row bee-row-7">
 			<div class="bee-background-video-container">
-				<div class="bee-iframe-video-container">
-					<iframe allow="fullscreen" allowfullscreen="allowfullscreen" frameborder="0"
+				<div id="player2" class="bee-iframe-video-container">
+					<!-- <iframe allow="fullscreen" allowfullscreen="allowfullscreen" frameborder="0"
 						src="https://www.youtube.com/embed/xK5CJGHAqME?controls=0&autoplay=1&mute=1&playlist=xK5CJGHAqME&loop=1">
-					</iframe>
+					</iframe> -->
 				</div>
+				<script>
+					// This code loads the IFrame API code asynchronously
+				
+					var tag = document.createElement('script');
+					tag.src = "https://www.youtube.com/iframe_api";
+					var firstScriptTag = document.getElementsByTagName('script')[0];
+					firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+				
+					// This function creates an <iframe> (and YouTube player)
+					//  after the API code downloads.
+					var player2;
+				
+					function onYouTubeIframeAPIReady() {
+						player2 = new YT.Player('player', {
+							width: '100%',
+							videoId: 'xK5CJGHAqME',
+							playerVars: {
+								'autoplay': 1,
+								'playsinline': 1,
+								'mute': 1,
+								'start': 4
+							},
+							events: {
+								'onReady': onPlayerReady
+							}
+						});
+					}
+				
+					// 4. The API will call this function when the video player is ready.
+					function onPlayerReady(event) {
+						event.target.mute();
+						event.target.playVideo();
+					}
+				</script>
 			</div>
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w6">
