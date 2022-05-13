@@ -744,11 +744,7 @@
 			<div class="bee-background-video-container">
 				<div id="player" class="bee-iframe-video-container"></div>
 
-				<!-- <iframe allow="fullscreen" allowfullscreen="allowfullscreen" frameborder="0"
-						src="https://www.youtube.com/embed/ZYOF5Aqr6tI?controls=0&autoplay=1&mute=1&playlist=ZYOF5Aqr6tI&loop=1&start=4">
-					</iframe> -->
-
-				<script>
+								<script>
 					// This code loads the IFrame API code asynchronously
 
 					var tag = document.createElement('script');
@@ -768,7 +764,7 @@
 								'autoplay': 1,
 								'playsinline': 1,
 								'mute': 1,
-								'start': 4
+								'start': 6
 							},
 							events: {
 								'onReady': onPlayerReady
@@ -1066,7 +1062,7 @@
 		<div class="bee-row bee-row-6">
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w6">
-					<div class="bee-block bee-block-1 bee-spacer bee-mobile_hide">
+					<div class="bee-block bee-block-1 bee-spacer"> 
 						<div class="spacer" style="height:60px;">
 						</div>
 					</div>
@@ -1144,44 +1140,11 @@
 		<div class="bee-row bee-row-7">
 			<div class="bee-background-video-container">
 				<div id="player2" class="bee-iframe-video-container">
-					<!-- <iframe allow="fullscreen" allowfullscreen="allowfullscreen" frameborder="0"
+					<iframe allow="fullscreen" allowfullscreen="allowfullscreen" frameborder="0"
 						src="https://www.youtube.com/embed/xK5CJGHAqME?controls=0&autoplay=1&mute=1&playlist=xK5CJGHAqME&loop=1">
-					</iframe> -->
+					</iframe>
 				</div>
-				<!-- <script>
-					// This code loads the IFrame API code asynchronously
 				
-					var tag2 = document.createElement('script');
-					tag2.src = "https://www.youtube.com/iframe_api";
-					var firstScriptTag2 = document.getElementsByTagName('script')[0];
-					firstScriptTag2.parentNode.insertBefore(tag2, firstScriptTag2);
-				
-					// This function creates an <iframe> (and YouTube player)
-					//  after the API code downloads.
-					var player2;
-				
-					function onYouTubeIframeAPIReady() {
-						player2 = new YT.Player('player2', {
-							width: '100%',
-							videoId: 'xK5CJGHAqME',
-							playerVars: {
-								'autoplay': 1,
-								'playsinline': 1,
-								'mute': 1,
-								'start': 4
-							},
-							events: {
-								'onReady': onPlayerReady
-							}
-						});
-					}
-				
-					// 4. The API will call this function when the video player is ready.
-					function onPlayerReady(event) {
-						event.target.mute();
-						event.target.playVideo();
-					}
-				</script> -->
 			</div>
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w6">
